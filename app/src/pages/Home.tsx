@@ -28,12 +28,6 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-8 md:mb-10">
-            <img src="/logo.jpg" alt="WIN Human Capital" className="h-20 md:h-24 w-auto rounded-xl bg-white p-1 shadow-xl mx-auto mb-5" />
-            <p className="text-white/80 text-sm md:text-base max-w-lg mx-auto">
-              Your trusted partner in maximizing your organization's potential.
-            </p>
-          </motion.div>
 
           {/* 3 Service Buttons */}
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="flex flex-col md:flex-row gap-4 w-full max-w-4xl px-4">
@@ -56,15 +50,6 @@ export default function Home() {
                 </motion.div>
               </Link>
             ))}
-          </motion.div>
-
-          {/* Contact Info */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-10 bg-white/10 backdrop-blur-sm rounded-xl p-5 max-w-xl w-full mx-4 border-l-4 border-[#FF8C00]">
-            <div className="space-y-1.5 text-sm text-white/90">
-              <p><span className="font-semibold">Phone:</span> <span className="text-[#FF8C00]">(+250) 788842883</span></p>
-              <p><span className="font-semibold">Email:</span> <span className="text-[#FF8C00]">winhumancapital@gmail.com</span></p>
-            </div>
           </motion.div>
 
           {/* Scroll */}
@@ -124,44 +109,6 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <img src="/about-leader.jpg" alt="WIN" className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto lg:ml-auto" />
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview Cards */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-2">Our <span className="text-[#FF8C00]">Services</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: Briefcase, title: 'HR Services', desc: 'Recruitment, payroll, performance & development', link: '/hr-services', image: '/hr-services.jpg' },
-              { icon: Sparkles, title: 'Corporate Events', desc: 'Galas, conferences, launches & team building', link: '/events-services', image: '/events-services.jpg' },
-              { icon: Heart, title: 'Communication', desc: 'C4D campaigns in health, education & governance', link: '/communication-services', image: '/communication-services.jpg' },
-            ].map((s, i) => (
-              <motion.div key={s.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Link to={s.link} className="group block">
-                  <div className="bg-[#FAFAF8] rounded-2xl overflow-hidden border border-gray-100 hover:border-[#FF8C00]/30 hover:shadow-xl transition-all">
-                    <div className="h-44 overflow-hidden">
-                      <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div className="p-5">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-9 h-9 rounded-lg bg-[#0022E8] flex items-center justify-center">
-                          <s.icon className="w-4 h-4 text-[#FF8C00]" />
-                        </div>
-                        <h3 className="text-lg font-bold text-[#0022E8]">{s.title}</h3>
-                      </div>
-                      <p className="text-gray-500 text-xs mb-3">{s.desc}</p>
-                      <span className="inline-flex items-center gap-1 text-[#FF8C00] font-semibold text-xs group-hover:gap-2 transition-all">
-                        Learn More <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

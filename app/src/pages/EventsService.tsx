@@ -11,7 +11,7 @@ const services = [
   { icon: Palette, title: 'Event Design & Branding' },
   { icon: Mic, title: 'Conference Management' },
   { icon: PartyPopper, title: 'Gala & Celebration' },
-  { icon: Users, title: 'Team Building' },
+  { icon: Planning, title: 'Protocal Services' },
   { icon: Camera, title: 'Media Production' },
   { icon: Monitor, title: 'Virtual & Hybrid Events' },
   { icon: Building2, title: 'Venue Coordination' },

@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/logo.jpg"
+              src="/logo.PNG"
               alt="WIN Human Capital"
               className="h-10 md:h-12 w-auto rounded-lg bg-white p-0.5 shadow-lg group-hover:scale-105 transition-transform"
             />

@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
-import { Users, Calendar, Megaphone, ArrowRight, ChevronDown, Award, Clock, DollarSign, Target, Heart, Briefcase, Sparkles, TrendingUp, Shield } from 'lucide-react';
+import { Users, Calendar, Megaphone, ArrowRight, ChevronDown, Award, Clock, DollarSign, Target, Heart, TrendingUp, Shield } from 'lucide-react';
 
 const heroServices = [
   { title: 'HR Services', path: '/hr-services', icon: Users, desc: 'Comprehensive HR solutions' },

@@ -72,7 +72,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#0022E8] mb-1">Address</h4>
-                    <p className="text-gray-600 text-sm">KG 42 Street, Gasabo – Kimironko – Kibagabaga, Kigali - Rwanda</p>
+                    <p className="text-gray-600 text-sm">Kibagabaga, KG 19, 301st, Trinity Corner House, Kigali - Rwanda</p>
                   </div>
                 </div>
 
@@ -82,7 +82,6 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#0022E8] mb-1">Phone</h4>
-                    <p className="text-gray-600 text-sm">(+250) 788842883</p>
                     <p className="text-gray-600 text-sm">(+250) 781886037</p>
                   </div>
                 </div>
@@ -93,7 +92,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#0022E8] mb-1">Email</h4>
-                    <p className="text-gray-600 text-sm">winhumancapital@gmail.com</p>
+                    <p className="text-gray-600 text-sm">info@winhumancapital.com</p>
                   </div>
                 </div>
 

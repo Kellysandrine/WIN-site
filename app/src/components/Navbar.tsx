@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +48,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  location.pathname === link.path
-                    ? 'bg-[#FF8C00] text-white'
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
-                }`}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-[#FF8C00] text-white hover:bg-[#FF8C00]/90"
               >
                 {link.name}
               </Link>
@@ -90,20 +86,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-white/10 mt-4 space-y-2 text-xs text-white/70">
-            <span className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#FF8C00]" />
-              (+250) 788842883 / (+250) 781886037
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail className="w-3.5 h-3.5 text-[#FF8C00]" />
-              winhumancapital@gmail.com
-            </span>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-[#FF8C00]" />
-              KG 42 Street, Gasabo – Kimironko – Kibagabaga, Kigali
-            </span>
-          </div>
         </div>
       </div>
     </nav>

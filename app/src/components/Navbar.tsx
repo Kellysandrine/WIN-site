@@ -18,10 +18,7 @@ export default function Navbar() {
   const isHome = location.pathname === '/';
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/hr-services' },
     { name: 'Projects', path: '/projects' },
-    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -33,25 +30,6 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      {/* Top bar - always visible when scrolled or not on home */}
-      {(scrolled || !isHome) && (
-        <div className="bg-[#FF8C00] text-white py-1.5 px-4 hidden md:block">
-          <div className="max-w-7xl mx-auto flex items-center justify-end gap-6 text-xs font-medium">
-            <span className="flex items-center gap-1.5">
-              <Phone className="w-3 h-3" />
-              (+250) 788842883
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Mail className="w-3 h-3" />
-              winhumancapital@gmail.com
-            </span>
-            <span className="flex items-center gap-1.5">
-              <MapPin className="w-3 h-3" />
-              Kigali, Rwanda
-            </span>
-          </div>
-        </div>
-      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">

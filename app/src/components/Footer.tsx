@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/logo.jpg"
+                src="/logo.PNG"
                 alt="WIN Human Capital"
                 className="h-12 w-auto rounded-lg bg-white p-0.5"
               />
@@ -58,11 +58,6 @@ export default function Footer() {
                   Communication
                 </Link>
               </li>
-              <li>
-                <Link to="/projects" className="text-white/70 hover:text-[#FF8C00] transition-colors text-sm">
-                  Projects
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -71,8 +66,8 @@ export default function Footer() {
             <h4 className="text-[#FF8C00] font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/" className="text-white/70 hover:text-[#FF8C00] transition-colors text-sm">
-                  Home
+                <Link to="/projects" className="text-white/70 hover:text-[#FF8C00] transition-colors text-sm">
+                  Projects
                 </Link>
               </li>
               <li>
@@ -100,19 +95,19 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF8C00] mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
-                  KG 42 Street, Gasabo – Kimironko – Kibagabaga, Kigali - Rwanda
+                  Kibagabaga, KG 19, 301st, Trinity Corner House, Kigali - Rwanda
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FF8C00] shrink-0" />
                 <span className="text-white/70 text-sm">
-                  (+250) 788842883 / (+250) 781886037
+              (+250) 781886037
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#FF8C00] shrink-0" />
                 <span className="text-white/70 text-sm">
-                  winhumancapital@gmail.com
+                  info@winhumancapital.com
                 </span>
               </li>
             </ul>

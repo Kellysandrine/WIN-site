@@ -16,6 +16,7 @@ const services = [
   { icon: Shield, title: 'Compliance & Risk' },
   { icon: FileCheck, title: 'Performance Management' },
   { icon: Headphones, title: 'HR Consulting' },
+  { icon: Users, title: 'Team Building' },
 ];
 
 const processSteps = [

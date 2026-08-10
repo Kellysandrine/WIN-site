@@ -6,14 +6,6 @@ import {
 } from 'lucide-react';
 import ProcessDiagram from '../components/ProcessDiagram';
 
-const services = [
-  {
-    icon: Lightbulb,
-    title: 'Concept Elaboration & Development',
-    desc: 'Strategic thinking and creative direction before production begins.',
-  },
-];
-
 const productionItems = [
   { icon: Share2, title: 'Digital Contents' },
   { icon: Megaphone, title: 'Ads' },

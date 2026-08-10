@@ -8,14 +8,17 @@ import {
 import ProcessDiagram from '../components/ProcessDiagram';
 
 const services = [
-  { icon: Film, title: 'Audio-visual Production' },
-  { icon: Tv, title: 'TV Advertising' },
-  { icon: FileText, title: 'Reports & Publications' },
+  {
+    icon: Lightbulb,
+    title: 'Concept Elaboration & Development',
+    desc: 'Strategic thinking and creative direction before production begins.',
+  },
+];
+
+const productionItems = [
+  { icon: Share2, title: 'Digital Contents' },
+  { icon: Megaphone, title: 'Ads' },
   { icon: BookOpen, title: 'Fiction & Documentaries' },
-  { icon: PenTool, title: 'Content Development' },
-  { icon: Globe, title: 'Media Strategy' },
-  { icon: Megaphone, title: 'Campaign Management' },
-  { icon: BarChart3, title: 'Impact Evaluation' },
 ];
 
 const expertise = [
@@ -78,7 +81,7 @@ export default function CommunicationService() {
         </div>
       </section>
 
-      {/* Services Grid - Icon Cards */}
+      {/* Services Grid */}
       <section className="py-16 md:py-20 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -93,22 +96,47 @@ export default function CommunicationService() {
             <p className="text-white/60 max-w-md mx-auto">Full-spectrum communication production</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="bg-white/5 rounded-2xl p-5 md:p-6 border border-white/10 hover:border-[#FF8C00]/50 hover:bg-white/10 transition-all group text-center"
-              >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#0022E8]/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0022E8]/40 transition-colors">
-                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#FF8C00]" />
-                </div>
-                <h3 className="text-white text-sm md:text-base font-semibold leading-tight">{service.title}</h3>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Concept card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-[#FF8C00]/50 transition-all flex flex-col justify-center"
+            >
+              <div className="w-14 h-14 rounded-xl bg-[#0022E8]/20 flex items-center justify-center mb-5">
+                <Lightbulb className="w-7 h-7 text-[#FF8C00]" />
+              </div>
+              <h3 className="text-white text-xl font-semibold mb-2">Concept Elaboration & Development</h3>
+              <p className="text-white/50 text-sm leading-relaxed">
+                Strategic thinking and creative direction before production begins.
+              </p>
+            </motion.div>
+
+            {/* Production card with sub-items */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-[#FF8C00]/50 transition-all"
+            >
+              <h3 className="text-white text-xl font-semibold mb-5">
+                Creation & Production of Dissemination Materials
+              </h3>
+              <div className="space-y-3">
+                {productionItems.map((item) => (
+                  <div
+                    key={item.title}
+                    className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3 border border-white/5"
+                  >
+                    <item.icon className="w-5 h-5 text-[#FF8C00] shrink-0" />
+                    <span className="text-white text-sm font-medium">{item.title}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

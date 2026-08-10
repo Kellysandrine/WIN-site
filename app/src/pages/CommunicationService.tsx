@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 import {
-  Megaphone, ArrowRight, Film, Tv, FileText, BookOpen,
-  PenTool, Globe, BarChart3, Heart, GraduationCap, Scale, Leaf,
+  Megaphone, ArrowRight, BookOpen, Heart, GraduationCap, Scale, Leaf,
   Search, Lightbulb, Palette, Video, Share2, TrendingUp
 } from 'lucide-react';
 import ProcessDiagram from '../components/ProcessDiagram';

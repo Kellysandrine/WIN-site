@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FolderOpen, Calendar, ArrowRight, Filter, Megaphone, Sparkles } from 'lucide-react';
-import { projects, type Category } from '../data/projects';
+import { useSite, type Category } from '../admin/store';
 
 const categories: { key: Category | 'all'; label: string; icon: typeof Megaphone }[] = [
   { key: 'all', label: 'All Projects', icon: FolderOpen },

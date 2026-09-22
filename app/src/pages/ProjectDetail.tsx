@@ -4,8 +4,7 @@ import {
   ArrowLeft, Calendar, FolderOpen, CheckCircle,
   ArrowRight, Megaphone, Sparkles, Tag
 } from 'lucide-react';
-import { getProjectById, projects } from '../data/projects';
-
+import { useSite } from '../admin/store';
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();

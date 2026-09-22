@@ -10,6 +10,9 @@ const categories: { key: Category | 'all'; label: string; icon: typeof Megaphone
   { key: 'events', label: 'Events', icon: Sparkles },
 ];
 
+const { content } = useSite();
+const projects = content.projects;
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<Category | 'all'>('all');
 

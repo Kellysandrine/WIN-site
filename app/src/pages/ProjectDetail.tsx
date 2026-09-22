@@ -4,17 +4,12 @@ import {
   ArrowLeft, Calendar, FolderOpen, CheckCircle,
   ArrowRight, Megaphone, Sparkles, Tag
 } from 'lucide-react';
-import { useSite } from '../admin/store';
+import { getProjectById, projects } from '../data/projects';
+
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const project = getProjectById(id || '');
-  const { content } = useSite();
-const project = content.projects.find((p) => p.id === id);
-// ...
-const related = content.projects
-  .filter((p) => p.category === project.category && p.id !== project.id)
-  .slice(0, 3);
 
   if (!project) {
     return (

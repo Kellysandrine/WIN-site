@@ -2,16 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FolderOpen, Calendar, ArrowRight, Filter, Megaphone, Sparkles } from 'lucide-react';
-import { useSite, type Category } from '../admin/store';
+import { projects, type Category } from '../data/projects';
 
 const categories: { key: Category | 'all'; label: string; icon: typeof Megaphone }[] = [
   { key: 'all', label: 'All Projects', icon: FolderOpen },
   { key: 'communication', label: 'Communication', icon: Megaphone },
   { key: 'events', label: 'Events', icon: Sparkles },
 ];
-
-const { content } = useSite();
-const projects = content.projects;
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<Category | 'all'>('all');

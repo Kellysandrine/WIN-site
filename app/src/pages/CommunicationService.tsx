@@ -30,20 +30,17 @@ const processSteps = [
 
 export default function CommunicationService() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/communication-services.jpg" alt="Communication Services" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0022E8]/90 to-[#0022E8]/60" />
-        </div>
-        <div className="relative z-10 h-full flex items-center">
+      <section className="page-hero">
+        <div className="page-hero-image"><img src="/communication-services.jpg" alt="Communication Services" className="w-full h-full object-cover" /></div>
+        <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
-                <span className="text-[#FF8C00]">Communication</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0022E8] mb-3">
+                <span className="text-[#0022E8]">Communication</span>
               </h1>
-              <p className="text-white/80 text-lg max-w-xl">
+              <p className="text-slate-600 text-lg max-w-xl">
                 Communication for Development — driving change in health, education, and governance.
               </p>
             </motion.div>
@@ -52,9 +49,9 @@ export default function CommunicationService() {
       </section>
 
       {/* Core Expertise - Compact */}
-      <section className="py-12 bg-[#0022E8]">
+      <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {expertise.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -62,10 +59,10 @@ export default function CommunicationService() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3"
+                className="flex items-center gap-3 bg-white rounded-xl px-4 py-3"
               >
                 <item.icon className="w-6 h-6 text-[#FF8C00] shrink-0" />
-                <span className="text-white font-semibold text-sm">{item.title}</span>
+                <span className="text-[#0022E8] font-semibold text-sm">{item.title}</span>
               </motion.div>
             ))}
           </div>
@@ -73,7 +70,7 @@ export default function CommunicationService() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-20 bg-[#0a0a0a]">
+      <section className="py-16 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,10 +78,10 @@ export default function CommunicationService() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Our <span className="text-[#FF8C00]">Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-3">
+              Our <span className="text-[#0022E8]">Services</span>
             </h2>
-            <p className="text-white/60 max-w-md mx-auto">Full-spectrum communication production</p>
+            <p className="text-slate-600 max-w-md mx-auto">Full-spectrum communication production</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,13 +91,13 @@ export default function CommunicationService() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-[#FF8C00]/50 transition-all flex flex-col justify-center"
+              className="bg-white rounded-2xl p-5 sm:p-8 border border-border hover:border-[#FF8C00]/50 transition-all flex flex-col justify-center"
             >
-              <div className="w-14 h-14 rounded-xl bg-[#0022E8]/20 flex items-center justify-center mb-5">
+              <div className="w-14 h-14 rounded-xl bg-[#0022E8]/5 flex items-center justify-center mb-5">
                 <Lightbulb className="w-7 h-7 text-[#FF8C00]" />
               </div>
-              <h3 className="text-white text-xl font-semibold mb-2">Concept Elaboration & Development</h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <h3 className="text-[#0022E8] text-xl font-semibold mb-2">Concept Elaboration & Development</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Strategic thinking and creative direction before production begins.
               </p>
             </motion.div>
@@ -111,19 +108,19 @@ export default function CommunicationService() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-[#FF8C00]/50 transition-all"
+              className="bg-white rounded-2xl p-5 sm:p-8 border border-border hover:border-[#FF8C00]/50 transition-all"
             >
-              <h3 className="text-white text-xl font-semibold mb-5">
+              <h3 className="text-[#0022E8] text-xl font-semibold mb-5">
                 Creation & Production of Dissemination Materials
               </h3>
               <div className="space-y-3">
                 {productionItems.map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3 border border-white/5"
+                    className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 border border-border"
                   >
                     <item.icon className="w-5 h-5 text-[#FF8C00] shrink-0" />
-                    <span className="text-white text-sm font-medium">{item.title}</span>
+                    <span className="text-[#0022E8] text-sm font-medium">{item.title}</span>
                   </div>
                 ))}
               </div>
@@ -133,7 +130,7 @@ export default function CommunicationService() {
       </section>
 
       {/* Process Diagram */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,11 +138,11 @@ export default function CommunicationService() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#FF8C00] font-semibold uppercase tracking-wider text-sm">Our Process</span>
+            <span className="text-[#0022E8] font-semibold uppercase tracking-wider text-sm">Our Process</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mt-2 mb-3">
-              How We <span className="text-[#FF8C00]">Work</span>
+              How We <span className="text-[#0022E8]">Work</span>
             </h2>
-            <p className="text-gray-500 max-w-md mx-auto">From research to impact assessment</p>
+            <p className="text-slate-600 max-w-md mx-auto">From research to impact assessment</p>
           </motion.div>
 
           <ProcessDiagram steps={processSteps} />
@@ -153,11 +150,11 @@ export default function CommunicationService() {
       </section>
 
       {/* Partners */}
-      <section className="py-16 md:py-20 bg-[#FAFAF8]">
+      <section className="py-16 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-2">Our <span className="text-[#FF8C00]">Partners</span></h2>
-            <p className="text-gray-500 text-sm">Organizations we've collaborated with</p>
+            <h2 className="text-3xl font-bold text-[#0022E8] mb-2">Our <span className="text-[#0022E8]">Partners</span></h2>
+            <p className="text-slate-600 text-sm">Organizations we've collaborated with</p>
           </motion.div>
           <div className="flex flex-wrap justify-center gap-3">
             {[
@@ -181,11 +178,11 @@ export default function CommunicationService() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#FF8C00]">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-bold text-white mb-4">Let's Create Impact Together</h2>
-            <p className="text-white/80 mb-8 max-w-xl mx-auto">Partner with us for communication solutions that drive real change.</p>
+            <h2 className="text-3xl font-bold text-[#0022E8] mb-4">Let's Create Impact Together</h2>
+            <p className="text-slate-600 mb-8 max-w-xl mx-auto">Partner with us for communication solutions that drive real change.</p>
             <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0022E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a40b8] transition-colors">
               Get In Touch <ArrowRight className="w-5 h-5" />
             </Link>

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%;
+    --background: 0 0% 95.6862745%;
     --foreground: 230 60% 12%;
     --card: 0 0% 100%;
     --card-foreground: 230 60% 12%;
@@ -20,7 +20,7 @@
     --accent-foreground: 230 60% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 15% 88%;
+    --border: 220 18% 86%;
     --input: 30 15% 88%;
     --ring: 32 100% 50%;
     --radius: 0.625rem;
@@ -102,3 +102,23 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--secondary));
 }
+
+/* Shared light surfaces and flexible page headers. */
+body { background-color: #F4F4F4; }
+main { overflow: clip; }
+:where(h1, h2, h3, p, a, span) { overflow-wrap: break-word; }
+:where(.grid, .flex) > * { min-width: 0; }
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid #0022E8; outline-offset: 4px; }
+nav a[aria-current="page"], nav a[aria-current="page"]:hover { background: #0022E8; color: white; }
+section { scroll-margin-top: 6rem; }
+.hero-accent { color: #0022E8; text-decoration: underline; text-decoration-color: #FF8C00; text-underline-offset: .15em; text-decoration-thickness: .07em; }
+.page-hero { display: grid; align-items: center; gap: 2rem; max-width: 80rem; margin-inline: auto; padding: 7rem 1rem 3rem; background: #F4F4F4; }
+.page-hero-content { grid-row: 1; }
+.page-hero-content > div { padding: 0; }
+.page-hero-image { overflow: hidden; border-radius: 1rem; aspect-ratio: 16 / 10; }
+.page-hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.page-hero h1 { font-size: clamp(2rem, 4.5vw, 3.75rem); line-height: 1.1; letter-spacing: -.035em; }
+.page-hero h1::after { content: ''; display: block; width: 3rem; height: .25rem; background: #FF8C00; margin-top: 1.25rem; border-radius: 1rem; }
+@media (min-width: 640px) { .page-hero { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .page-hero { grid-template-columns: 1.1fr 1fr; gap: 3rem; padding: 8rem 2rem 4rem; } .page-hero-content { grid-column: 1; } .page-hero-image { grid-column: 2; grid-row: 1; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }

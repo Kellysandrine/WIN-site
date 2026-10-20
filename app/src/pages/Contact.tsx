@@ -23,24 +23,21 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/office-building.jpg" alt="Contact WIN" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0022E8]/90 to-[#0022E8]/70" />
-        </div>
-        <div className="relative z-10 h-full flex items-center">
+      <section className="page-hero">
+        <div className="page-hero-image"><img src="/office-building.jpg" alt="Contact WIN" className="w-full h-full object-cover" /></div>
+        <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Contact <span className="text-[#FF8C00]">Us</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0022E8] mb-4">
+                Contact <span className="text-[#0022E8]">Us</span>
               </h1>
-              <p className="text-white/80 text-lg max-w-2xl">
+              <p className="text-slate-600 text-lg max-w-2xl">
                 Get in touch with our team for tailored solutions designed to fit your unique business needs.
               </p>
             </motion.div>
@@ -59,7 +56,7 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold text-[#0022E8] mb-6">
-                Get In <span className="text-[#FF8C00]">Touch</span>
+                Get In <span className="text-[#0022E8]">Touch</span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Whether you are a growing startup or an established corporation, our team is dedicated to delivering professionalism, integrity, and innovative solutions to exceed your expectations.
@@ -111,16 +108,16 @@ export default function Contact() {
               <div>
                 <h4 className="font-semibold text-[#0022E8] mb-3">Follow Us</h4>
                 <div className="flex gap-3">
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
+                  <a href="#" aria-label="Linkedin" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
                     <Linkedin className="w-4 h-4" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
+                  <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
                     <Facebook className="w-4 h-4" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
+                  <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
                     <Twitter className="w-4 h-4" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
+                  <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-[#0022E8] flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] text-white transition-all">
                     <Instagram className="w-4 h-4" />
                   </a>
                 </div>
@@ -134,7 +131,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-[#FAFAF8] rounded-2xl p-8 border border-gray-100">
+              <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-100">
                 <div className="flex items-center gap-3 mb-6">
                   <MessageSquare className="w-6 h-6 text-[#FF8C00]" />
                   <h3 className="text-xl font-bold text-[#0022E8]">Send Us a Message</h3>
@@ -155,9 +152,10 @@ export default function Contact() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-[#0022E8] mb-1.5">Full Name</label>
+                      <label htmlFor="contact-name" className="block text-sm font-medium text-[#0022E8] mb-1.5">Full Name</label>
                       <input
                         type="text"
+                        id="contact-name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
@@ -168,10 +166,11 @@ export default function Contact() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-[#0022E8] mb-1.5">Email</label>
+                        <label htmlFor="contact-email" className="block text-sm font-medium text-[#0022E8] mb-1.5">Email</label>
                         <input
                           type="email"
-                          name="email"
+                          id="contact-email"
+                        name="email"
                           value={formData.email}
                           onChange={handleChange}
                           required
@@ -180,10 +179,11 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-[#0022E8] mb-1.5">Phone</label>
+                        <label htmlFor="contact-phone" className="block text-sm font-medium text-[#0022E8] mb-1.5">Phone</label>
                         <input
                           type="tel"
-                          name="phone"
+                          id="contact-phone"
+                        name="phone"
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#FF8C00] focus:ring-2 focus:ring-[#FF8C00]/20 outline-none transition-all bg-white"
@@ -192,8 +192,9 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#0022E8] mb-1.5">Service Interest</label>
+                      <label htmlFor="contact-service" className="block text-sm font-medium text-[#0022E8] mb-1.5">Service Interest</label>
                       <select
+                        id="contact-service"
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
@@ -207,8 +208,9 @@ export default function Contact() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#0022E8] mb-1.5">Message</label>
+                      <label htmlFor="contact-message" className="block text-sm font-medium text-[#0022E8] mb-1.5">Message</label>
                       <textarea
+                        id="contact-message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}

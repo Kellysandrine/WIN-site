@@ -34,20 +34,17 @@ export default function ProjectDetail() {
   const CategoryIcon = project.category === 'communication' ? Megaphone : Sparkles;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero with Image */}
-      <section className="relative h-[55vh] min-h-[400px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        </div>
-        <div className="relative z-10 h-full flex flex-col justify-end">
+      <section className="page-hero">
+        <div className="page-hero-image"><img src={project.image} alt={project.title} className="w-full h-full object-cover" /></div>
+        <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               {/* Back link */}
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-white/80 hover:text-[#FF8C00] transition-colors text-sm mb-4"
+                className="inline-flex items-center gap-2 text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm mb-4"
               >
                 <ArrowLeft className="w-4 h-4" /> Back to Projects
               </Link>
@@ -57,20 +54,20 @@ export default function ProjectDetail() {
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 ${
                   project.category === 'communication'
                     ? 'bg-[#0022E8] text-white'
-                    : 'bg-[#FF8C00] text-white'
+                    : 'bg-[#FF8C00] text-[#0022E8]'
                 }`}>
                   <CategoryIcon className="w-3 h-3" />
                   {project.category === 'communication' ? 'Communication' : 'Events'}
                 </span>
-                <span className="text-white/60 text-xs flex items-center gap-1">
+                <span className="text-slate-600 text-xs flex items-center gap-1">
                   <Calendar className="w-3 h-3" /> {project.year}
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0022E8] mb-2">
                 {project.title}
               </h1>
-              <p className="text-white/70 text-sm md:text-base max-w-2xl">
+              <p className="text-slate-600 text-sm md:text-base max-w-2xl">
                 {project.shortDesc}
               </p>
             </motion.div>
@@ -90,7 +87,7 @@ export default function ProjectDetail() {
               className="lg:col-span-2"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-[#0022E8] mb-6">
-                Project <span className="text-[#FF8C00]">Overview</span>
+                Project <span className="text-[#0022E8]">Overview</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">{project.overview}</p>
 
@@ -100,7 +97,7 @@ export default function ProjectDetail() {
                 {project.deliverables.map((deliverable) => (
                   <div
                     key={deliverable}
-                    className="flex items-center gap-3 bg-[#FAFAF8] rounded-xl px-4 py-3 border border-gray-100"
+                    className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-gray-100"
                   >
                     <CheckCircle className="w-5 h-5 text-[#FF8C00] shrink-0" />
                     <span className="text-gray-700 text-sm font-medium">{deliverable}</span>
@@ -115,27 +112,27 @@ export default function ProjectDetail() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-gray-100 sticky top-24">
+              <div className="bg-white rounded-2xl p-6 border border-gray-100 sticky top-24">
                 <h3 className="text-lg font-bold text-[#0022E8] mb-5">Project Details</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <FolderOpen className="w-5 h-5 text-[#FF8C00] mt-0.5 shrink-0" />
                     <div>
-                      <span className="text-xs text-gray-400 uppercase tracking-wider">Client</span>
+                      <span className="text-xs text-slate-600 uppercase tracking-wider">Client</span>
                       <p className="text-gray-800 text-sm font-medium">{project.client}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Tag className="w-5 h-5 text-[#FF8C00] mt-0.5 shrink-0" />
                     <div>
-                      <span className="text-xs text-gray-400 uppercase tracking-wider">Category</span>
+                      <span className="text-xs text-slate-600 uppercase tracking-wider">Category</span>
                       <p className="text-gray-800 text-sm font-medium capitalize">{project.category}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Calendar className="w-5 h-5 text-[#FF8C00] mt-0.5 shrink-0" />
                     <div>
-                      <span className="text-xs text-gray-400 uppercase tracking-wider">Year</span>
+                      <span className="text-xs text-slate-600 uppercase tracking-wider">Year</span>
                       <p className="text-gray-800 text-sm font-medium">{project.year}</p>
                     </div>
                   </div>
@@ -157,7 +154,7 @@ export default function ProjectDetail() {
 
       {/* Related Projects */}
       {related.length > 0 && (
-        <section className="py-12 md:py-16 bg-[#FAFAF8] border-t border-gray-100">
+        <section className="py-12 md:py-16 bg-background border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -166,11 +163,11 @@ export default function ProjectDetail() {
               className="mb-8"
             >
               <h2 className="text-2xl font-bold text-[#0022E8]">
-                Related <span className="text-[#FF8C00]">Projects</span>
+                Related <span className="text-[#0022E8]">Projects</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map((rp, index) => (
                 <motion.div
                   key={rp.id}
@@ -189,11 +186,11 @@ export default function ProjectDetail() {
                         />
                       </div>
                       <div className="p-4">
-                        <h4 className="font-bold text-[#0022E8] text-sm mb-1 group-hover:text-[#FF8C00] transition-colors">
+                        <h4 className="font-bold text-[#0022E8] text-sm mb-1 group-hover:text-[#0022E8] transition-colors">
                           {rp.title}
                         </h4>
-                        <p className="text-gray-500 text-xs line-clamp-2">{rp.shortDesc}</p>
-                        <div className="mt-2 flex items-center gap-1 text-[#FF8C00] font-semibold text-xs">
+                        <p className="text-slate-600 text-xs line-clamp-2">{rp.shortDesc}</p>
+                        <div className="mt-2 flex items-center gap-1 text-[#0022E8] font-semibold text-xs">
                           View <ArrowRight className="w-3 h-3" />
                         </div>
                       </div>

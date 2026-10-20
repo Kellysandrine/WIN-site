@@ -109,7 +109,7 @@ main { overflow: clip; }
 :where(h1, h2, h3, p, a, span) { overflow-wrap: break-word; }
 :where(.grid, .flex) > * { min-width: 0; }
 :where(a, button, input, select, textarea):focus-visible { outline: 3px solid #0022E8; outline-offset: 4px; }
-nav a[aria-current="page"] { background: #0022E8; color: white; }
+nav a[aria-current="page"], nav a[aria-current="page"]:hover { background: #0022E8; color: white; }
 section { scroll-margin-top: 6rem; }
 .hero-accent { color: #0022E8; text-decoration: underline; text-decoration-color: #FF8C00; text-underline-offset: .15em; text-decoration-thickness: .07em; }
 .page-hero { display: grid; align-items: center; gap: 2rem; max-width: 80rem; margin-inline: auto; padding: 7rem 1rem 3rem; background: #F4F4F4; }

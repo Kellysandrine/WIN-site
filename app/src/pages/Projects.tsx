@@ -18,20 +18,17 @@ export default function Projects() {
     : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative h-[40vh] min-h-[280px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/project-conference.jpg" alt="Projects" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0022E8]/90 to-[#0022E8]/60" />
-        </div>
-        <div className="relative z-10 h-full flex items-center">
+      <section className="page-hero">
+        <div className="page-hero-image"><img src="/project-conference.jpg" alt="Projects" className="w-full h-full object-cover" /></div>
+        <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
-                Our <span className="text-[#FF8C00]">Projects</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0022E8] mb-3">
+                Our <span className="text-[#0022E8]">Projects</span>
               </h1>
-              <p className="text-white/80 text-lg max-w-lg">
+              <p className="text-slate-600 text-lg max-w-lg">
                 A showcase of our work across communication and corporate events.
               </p>
             </motion.div>
@@ -40,10 +37,10 @@ export default function Projects() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-8 bg-[#FAFAF8] border-b border-gray-100">
+      <section className="py-8 bg-background border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-4">
-            <Filter className="w-4 h-4 text-[#0022E8]" />
+            <Filter className="w-4 h-4 text-[#FF8C00]" />
             <span className="text-sm font-medium text-gray-600">Filter by category</span>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -85,7 +82,7 @@ export default function Projects() {
                   transition={{ duration: 0.4, delay: index * 0.06 }}
                 >
                   <Link to={`/projects/${project.id}`} className="group block">
-                    <div className="bg-[#FAFAF8] rounded-2xl overflow-hidden border border-gray-100 hover:border-[#FF8C00]/40 hover:shadow-xl transition-all h-full">
+                    <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#FF8C00]/40 hover:shadow-xl transition-all h-full">
                       {/* Image */}
                       <div className="relative h-52 overflow-hidden">
                         <img
@@ -97,7 +94,7 @@ export default function Projects() {
                           <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
                             project.category === 'communication'
                               ? 'bg-[#0022E8] text-white'
-                              : 'bg-[#FF8C00] text-white'
+                              : 'bg-[#FF8C00] text-[#0022E8]'
                           }`}>
                             {project.category === 'communication' ? 'Communication' : 'Events'}
                           </span>
@@ -105,21 +102,21 @@ export default function Projects() {
                       </div>
                       {/* Content */}
                       <div className="p-5">
-                        <h3 className="text-lg font-bold text-[#0022E8] mb-2 group-hover:text-[#FF8C00] transition-colors">
+                        <h3 className="text-lg font-bold text-[#0022E8] mb-2 group-hover:text-[#0022E8] transition-colors">
                           {project.title}
                         </h3>
-                        <p className="text-gray-500 text-sm mb-3 line-clamp-2">{project.shortDesc}</p>
+                        <p className="text-slate-600 text-sm mb-3 line-clamp-2">{project.shortDesc}</p>
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 text-xs text-gray-400">
+                          <div className="flex items-center gap-2 text-xs text-slate-600">
                             <FolderOpen className="w-3.5 h-3.5" />
                             <span>{project.client}</span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-gray-400">
+                          <div className="flex items-center gap-1 text-xs text-slate-600">
                             <Calendar className="w-3.5 h-3.5" />
                             <span>{project.year}</span>
                           </div>
                         </div>
-                        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-1 text-[#FF8C00] font-semibold text-sm group-hover:gap-2 transition-all">
+                        <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-1 text-[#0022E8] font-semibold text-sm group-hover:gap-2 transition-all">
                           View Details <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
@@ -131,7 +128,7 @@ export default function Projects() {
           </AnimatePresence>
 
           {filtered.length === 0 && (
-            <div className="text-center py-16 text-gray-400">
+            <div className="text-center py-16 text-slate-600">
               No projects found in this category.
             </div>
           )}

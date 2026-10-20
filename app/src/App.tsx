@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router'
+import { Routes, Route, useLocation } from 'react-router'
+import { useEffect } from 'react'
+import { MotionConfig } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -11,7 +13,10 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 
 export default function App() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [pathname])
   return (
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
@@ -28,5 +33,6 @@ export default function App() {
       </main>
       <Footer />
     </div>
+    </MotionConfig>
   )
 }

@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section aria-labelledby="hero-heading" className="bg-[#081641] pt-28 pb-10 md:pt-32 lg:pb-12">
+      <section aria-labelledby="hero-heading" className="bg-background pt-28 pb-10 md:pt-32 lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-14">
             {/* Services stay in the left column, clear of the photograph. */}
@@ -33,14 +33,14 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="min-w-0"
             >
-              <p className="text-[#FF8C00] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-5">
+              <p className="text-[#0022E8] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-5">
                 WIN Human Capital
               </p>
-              <h1 id="hero-heading" className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-white mb-5">
+              <h1 id="hero-heading" className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-[#0022E8] mb-5">
                 Your People,<br />
-                <span className="text-[#FF8C00]">Your Strengths.</span>
+                <span className="hero-accent">Your Strengths.</span>
               </h1>
-              <p className="text-white/75 text-base leading-relaxed max-w-md mb-8">
+              <p className="text-slate-600 text-base leading-relaxed max-w-md mb-8">
                 HR solutions, corporate events and communication services.
               </p>
 
@@ -49,13 +49,13 @@ export default function Home() {
                   <Link
                     key={service.path}
                     to={service.path}
-                    className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-[#0066CC] px-5 py-5 text-white shadow-lg transition-[background-color,border-color,transform] duration-200 hover:bg-[#0077dd] hover:border-[#FF8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#081641] motion-safe:hover:translate-x-1 motion-reduce:transition-none sm:px-6"
+                    className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-white px-5 py-5 text-[#0022E8] shadow-sm transition-[background-color,border-color,transform] duration-200 hover:bg-[#0022E8]/5 hover:border-[#FF8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F4F4] motion-safe:hover:translate-x-1 motion-reduce:transition-none sm:px-6"
                   >
                     <div className="flex min-w-0 items-center gap-4">
                       <service.icon aria-hidden="true" className="w-6 h-6 text-[#FF8C00] shrink-0" />
                       <div>
                         <span className="block font-bold text-sm sm:text-base tracking-wide uppercase">{service.title}</span>
-                        <span className="block text-white/80 text-sm mt-1">{service.desc}</span>
+                        <span className="block text-slate-600 text-sm mt-1">{service.desc}</span>
                       </div>
                     </div>
                     <ArrowRight aria-hidden="true" className="w-5 h-5 shrink-0 text-[#FF8C00] transition-transform motion-safe:group-hover:translate-x-1 motion-reduce:transition-none" />
@@ -81,7 +81,7 @@ export default function Home() {
             <button
               type="button"
               aria-label="Explore why clients choose WIN Human Capital"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-[#FF8C00] transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00]"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-[#0022E8] transition-colors hover:bg-[#0022E8]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00]"
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth' })}
             >
               <ChevronDown aria-hidden="true" className="h-5 w-5" />
@@ -91,10 +91,10 @@ export default function Home() {
       </section>
 
       {/* Features - Icon Grid */}
-      <section id="features" className="py-16 md:py-20 bg-[#0a0a0a]">
+      <section id="features" className="py-16 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Why <span className="text-[#FF8C00]">Choose Us</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-3">Why <span className="text-[#0022E8]">Choose Us</span></h2>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {features.map((feature, index) => (
@@ -104,13 +104,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="bg-white/5 rounded-2xl p-5 md:p-6 border border-white/10 hover:border-[#FF8C00]/50 text-center transition-all group"
+                className="bg-white rounded-2xl p-5 md:p-6 border border-border hover:border-[#FF8C00]/50 text-center transition-all group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0022E8]/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0022E8]/40 transition-colors">
-                  <feature.icon className="w-6 h-6 text-[#FF8C00]" />
+                <div className="w-12 h-12 rounded-xl bg-[#0022E8]/5 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#FF8C00]/15 transition-colors">
+                  <feature.icon className="w-6 h-6 text-[#0022E8]" />
                 </div>
-                <h3 className="text-white text-sm font-semibold mb-1">{feature.title}</h3>
-                <p className="text-white/50 text-xs">{feature.desc}</p>
+                <h3 className="text-[#0022E8] text-sm font-semibold mb-1">{feature.title}</h3>
+                <p className="text-slate-600 text-xs">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -118,18 +118,15 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-16 md:py-20 bg-[#0022E8] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src="/office-building.jpg" alt="" className="w-full h-full object-cover" />
-        </div>
+      <section className="py-16 md:py-20 bg-background relative overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your People, <span className="text-[#FF8C00]">Your Strengths</span></h2>
-              <p className="text-white/80 mb-6 text-sm leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-4">Your People, <span className="text-[#0022E8]">Your Strengths</span></h2>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">
                 Since 2011, WIN Human Capital has been dedicated to enhancing your people's capacity and maximizing ROI. We offer tailored HR solutions, event management, and C4D services.
               </p>
-              <Link to="/about" className="inline-flex items-center gap-2 bg-[#FF8C00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9f1a] transition-colors text-sm">
+              <Link to="/about" className="inline-flex items-center gap-2 bg-[#FF8C00] text-[#0022E8] px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9f1a] transition-colors text-sm">
                 About Us <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -141,10 +138,10 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#FF8C00]">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold text-[#0022E8] mb-6">Ready to Get Started?</h2>
             <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0022E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a40b8] transition-colors">
               <Target className="w-5 h-5" /> Contact Us
             </Link>

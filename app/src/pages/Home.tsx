@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Users, Calendar, Megaphone, ArrowRight, ChevronDown, Award, Clock, DollarSign, Target, Heart, TrendingUp, Shield } from 'lucide-react';
 
 const heroServices = [
@@ -18,48 +18,75 @@ const features = [
 ];
 
 export default function Home() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/hero-bg.jpg" alt="WIN Human Capital" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0022E8]/80 via-[#0022E8]/70 to-[#0022E8]/90" />
-        </div>
+      <section aria-labelledby="hero-heading" className="bg-[#081641] pt-28 pb-10 md:pt-32 lg:pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-14">
+            {/* Services stay in the left column, clear of the photograph. */}
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="min-w-0"
+            >
+              <p className="text-[#FF8C00] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-5">
+                WIN Human Capital
+              </p>
+              <h1 id="hero-heading" className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-white mb-5">
+                Your People,<br />
+                <span className="text-[#FF8C00]">Your Strengths.</span>
+              </h1>
+              <p className="text-white/75 text-base leading-relaxed max-w-md mb-8">
+                HR solutions, corporate events and communication services.
+              </p>
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
-
-          {/* 3 Service Buttons */}
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="flex flex-col md:flex-row gap-4 w-full max-w-4xl px-4">
-            {heroServices.map((service, index) => (
-              <Link key={service.path} to={service.path} className="group flex-1">
-                <motion.div
-                  whileHover={{ scale: 1.03, y: -4 }} whileTap={{ scale: 0.98 }}
-                  initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="bg-[#0066CC] hover:bg-[#0077dd] text-white rounded-xl px-6 py-5 flex items-center justify-between shadow-xl transition-all border border-white/10"
-                >
-                  <div className="flex items-center gap-4">
-                    <service.icon className="w-6 h-6 text-[#FF8C00] shrink-0" />
-                    <div className="text-left">
-                      <span className="block font-bold text-sm tracking-wide uppercase">{service.title}</span>
-                      <span className="text-white/60 text-xs hidden md:block">{service.desc}</span>
+              <div className="flex flex-col gap-3">
+                {heroServices.map((service) => (
+                  <Link
+                    key={service.path}
+                    to={service.path}
+                    className="group flex items-center justify-between gap-4 rounded-xl border border-white/15 bg-[#0066CC] px-5 py-5 text-white shadow-lg transition-[background-color,border-color,transform] duration-200 hover:bg-[#0077dd] hover:border-[#FF8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#081641] motion-safe:hover:translate-x-1 motion-reduce:transition-none sm:px-6"
+                  >
+                    <div className="flex min-w-0 items-center gap-4">
+                      <service.icon aria-hidden="true" className="w-6 h-6 text-[#FF8C00] shrink-0" />
+                      <div>
+                        <span className="block font-bold text-sm sm:text-base tracking-wide uppercase">{service.title}</span>
+                        <span className="block text-white/80 text-sm mt-1">{service.desc}</span>
+                      </div>
                     </div>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-[#FF8C00] group-hover:translate-x-1 transition-transform" />
-                </motion.div>
-              </Link>
-            ))}
-          </motion.div>
-
-          {/* Scroll */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
-            <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center gap-2 cursor-pointer"
-              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>
-              <ChevronDown className="w-5 h-5 text-[#FF8C00]" />
+                    <ArrowRight aria-hidden="true" className="w-5 h-5 shrink-0 text-[#FF8C00] transition-transform motion-safe:group-hover:translate-x-1 motion-reduce:transition-none" />
+                  </Link>
+                ))}
+              </div>
             </motion.div>
-          </motion.div>
+
+            {/* Original image at full opacity, with no tint or overlay. */}
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[min(70svh,620px)] lg:min-h-[520px]">
+              <img
+                src="/hero-bg.jpg"
+                alt="A team collaborating during a presentation in a bright meeting room"
+                width={480}
+                height={275}
+                fetchPriority="high"
+                className="h-full w-full object-cover object-[60%_center]"
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 flex justify-center lg:mt-10">
+            <button
+              type="button"
+              aria-label="Explore why clients choose WIN Human Capital"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-[#FF8C00] transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00]"
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth' })}
+            >
+              <ChevronDown aria-hidden="true" className="h-5 w-5" />
+            </button>
+          </div>
         </div>
       </section>
 

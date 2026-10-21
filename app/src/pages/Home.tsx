@@ -118,15 +118,15 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-16 md:py-20 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-[#0022E8] relative overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-4">Your People, <span className="text-[#0022E8]">Your Strengths</span></h2>
-              <p className="text-slate-600 mb-6 text-sm leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your People, <span className="text-white">Your Strengths</span></h2>
+              <p className="text-white/85 mb-6 text-sm leading-relaxed">
                 Since 2011, WIN Human Capital has been dedicated to enhancing your people's capacity and maximizing ROI. We offer tailored HR solutions, event management, and C4D services.
               </p>
-              <Link to="/about" className="inline-flex items-center gap-2 bg-[#FF8C00] text-[#0022E8] px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9f1a] transition-colors text-sm">
+              <Link to="/about" className="inline-flex items-center gap-2 bg-[#FF8C00] text-[#081641] px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9f1a] transition-colors text-sm">
                 About Us <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -138,10 +138,10 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-[#FF8C00]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold text-[#081641] mb-6">Ready to Get Started?</h2>
             <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0022E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a40b8] transition-colors">
               <Target className="w-5 h-5" /> Contact Us
             </Link>

@@ -104,7 +104,7 @@ export default function HRService() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-[#0022E8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ export default function HRService() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-8">Why <span className="text-[#0022E8]">WIN HR</span></h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Why <span className="text-white">WIN HR</span></h2>
           </motion.div>
           <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
@@ -130,9 +130,9 @@ export default function HRService() {
                 className="text-center"
               >
                 <div className="w-14 h-14 rounded-full bg-[#FF8C00] flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-6 h-6 text-[#0022E8]" />
+                  <item.icon className="w-6 h-6 text-[#081641]" />
                 </div>
-                <span className="text-slate-600 text-sm font-medium">{item.label}</span>
+                <span className="text-white/85 text-sm font-medium">{item.label}</span>
               </motion.div>
             ))}
           </div>
@@ -140,11 +140,11 @@ export default function HRService() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-[#FF8C00]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-4">Transform Your Workforce</h2>
-            <p className="text-slate-600 mb-8 max-w-xl mx-auto">Let us help you build a stronger, more productive team.</p>
+            <h2 className="text-3xl font-bold text-[#081641] mb-4">Transform Your Workforce</h2>
+            <p className="text-[#081641] mb-8 max-w-xl mx-auto">Let us help you build a stronger, more productive team.</p>
             <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0022E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a40b8] transition-colors">
               Contact Us <ArrowRight className="w-5 h-5" />
             </Link>

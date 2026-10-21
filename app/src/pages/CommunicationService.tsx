@@ -49,7 +49,7 @@ export default function CommunicationService() {
       </section>
 
       {/* Core Expertise - Compact */}
-      <section className="py-12 bg-background">
+      <section className="py-12 bg-[#0022E8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {expertise.map((item, index) => (
@@ -59,10 +59,10 @@ export default function CommunicationService() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center gap-3 bg-white rounded-xl px-4 py-3"
+                className="flex items-center gap-3 bg-white/10 rounded-xl border border-white/20 px-4 py-3"
               >
                 <item.icon className="w-6 h-6 text-[#FF8C00] shrink-0" />
-                <span className="text-[#0022E8] font-semibold text-sm">{item.title}</span>
+                <span className="text-white font-semibold text-sm">{item.title}</span>
               </motion.div>
             ))}
           </div>
@@ -178,11 +178,11 @@ export default function CommunicationService() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-[#FF8C00]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-bold text-[#0022E8] mb-4">Let's Create Impact Together</h2>
-            <p className="text-slate-600 mb-8 max-w-xl mx-auto">Partner with us for communication solutions that drive real change.</p>
+            <h2 className="text-3xl font-bold text-[#081641] mb-4">Let's Create Impact Together</h2>
+            <p className="text-[#081641] mb-8 max-w-xl mx-auto">Partner with us for communication solutions that drive real change.</p>
             <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0022E8] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a40b8] transition-colors">
               Get In Touch <ArrowRight className="w-5 h-5" />
             </Link>

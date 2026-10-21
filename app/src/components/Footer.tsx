@@ -7,7 +7,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-background text-[#0022E8] border-t border-border">
+    <footer className="bg-[#0022E8] text-white border-t border-white/20">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -20,20 +20,20 @@ export default function Footer() {
                 className="h-12 w-auto rounded-lg bg-white p-0.5"
               />
             </div>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-white/80 text-sm leading-relaxed">
               Your trusted partner in maximizing your organization's potential through comprehensive HR services and Events Management since 2011.
             </p>
             <div className="flex gap-3">
-              <a href="#" aria-label="Linkedin" className="w-9 h-9 rounded-full bg-white flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
+              <a href="#" aria-label="Linkedin" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
+              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Twitter" className="w-9 h-9 rounded-full bg-white flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
+              <a href="#" aria-label="Twitter" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
+              <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF8C00] hover:text-[#0022E8] transition-all">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -41,20 +41,20 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-[#0022E8] font-semibold text-sm uppercase tracking-wider mb-4">Our Services</h4>
+            <h4 className="text-[#FF8C00] font-semibold text-sm uppercase tracking-wider mb-4">Our Services</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/hr-services" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/hr-services" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   HR Services
                 </Link>
               </li>
               <li>
-                <Link to="/events-services" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/events-services" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   Corporate Events
                 </Link>
               </li>
               <li>
-                <Link to="/communication-services" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/communication-services" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   Communication
                 </Link>
               </li>
@@ -63,25 +63,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[#0022E8] font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+            <h4 className="text-[#FF8C00] font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/projects" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/projects" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/about" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm">
+                <Link to="/contact" className="text-white/80 hover:text-[#FF8C00] hover:underline transition-colors text-sm">
                   Contact
                 </Link>
               </li>
               <li>
-                <span className="text-slate-600 text-sm">
+                <span className="text-white/80 text-sm">
                   Careers
                 </span>
               </li>
@@ -90,23 +90,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[#0022E8] font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h4>
+            <h4 className="text-[#FF8C00] font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF8C00] mt-0.5 shrink-0" />
-                <span className="text-slate-600 text-sm">
+                <span className="text-white/80 text-sm">
                   Kibagabaga, KG 19, 301st, Trinity Corner House, Kigali - Rwanda
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FF8C00] shrink-0" />
-                <span className="text-slate-600 text-sm">
+                <span className="text-white/80 text-sm">
               (+250) 781886037
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#FF8C00] shrink-0" />
-                <span className="text-slate-600 text-sm break-all">
+                <span className="text-white/80 text-sm break-all">
                   info@winhumancapital.com
                 </span>
               </li>
@@ -116,12 +116,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border">
+      <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-600 text-xs">
+          <p className="text-white/80 text-xs">
             © 2024 WIN Human Capital. All rights reserved.
           </p>
-          <p className="text-slate-600 text-xs">
+          <p className="text-white/80 text-xs">
             Your people, your strengths!
           </p>
           <button

@@ -18,17 +18,17 @@ export default function Projects() {
     : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#0022E8]">
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-image"><img src="/project-conference.jpg" alt="Projects" className="w-full h-full object-cover" /></div>
         <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0022E8] mb-3">
-                Our <span className="text-[#0022E8]">Projects</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+                Our <span className="text-white">Projects</span>
               </h1>
-              <p className="text-slate-600 text-lg max-w-lg">
+              <p className="text-white/80 text-lg max-w-lg">
                 A showcase of our work across communication and corporate events.
               </p>
             </motion.div>
@@ -37,7 +37,7 @@ export default function Projects() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-8 bg-background border-b border-gray-100">
+      <section className="py-8 bg-[#FF8C00] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-4 h-4 text-[#FF8C00]" />

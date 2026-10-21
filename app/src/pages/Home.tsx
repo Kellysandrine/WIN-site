@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section aria-labelledby="hero-heading" className="bg-background pt-28 pb-10 md:pt-32 lg:pb-12">
+      <section aria-labelledby="hero-heading" className="bg-[#0022E8] pt-28 pb-10 md:pt-32 lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-14">
             {/* Services stay in the left column, clear of the photograph. */}
@@ -33,14 +33,14 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="min-w-0"
             >
-              <p className="text-[#0022E8] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-5">
+              <p className="text-white text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-5">
                 WIN Human Capital
               </p>
-              <h1 id="hero-heading" className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-[#0022E8] mb-5">
+              <h1 id="hero-heading" className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-white mb-5">
                 Your People,<br />
                 <span className="hero-accent">Your Strengths.</span>
               </h1>
-              <p className="text-slate-600 text-base leading-relaxed max-w-md mb-8">
+              <p className="text-white/80 text-base leading-relaxed max-w-md mb-8">
                 HR solutions, corporate events and communication services.
               </p>
 
@@ -49,13 +49,13 @@ export default function Home() {
                   <Link
                     key={service.path}
                     to={service.path}
-                    className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-white px-5 py-5 text-[#0022E8] shadow-sm transition-[background-color,border-color,transform] duration-200 hover:bg-[#0022E8]/5 hover:border-[#FF8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F4F4F4] motion-safe:hover:translate-x-1 motion-reduce:transition-none sm:px-6"
+                    className="group flex items-center justify-between gap-4 rounded-xl border border-white/25 bg-white/10 px-5 py-5 text-white shadow-sm transition-[background-color,border-color,transform] duration-200 hover:bg-white/20 hover:border-[#FF8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#0022E8] motion-safe:hover:translate-x-1 motion-reduce:transition-none sm:px-6"
                   >
                     <div className="flex min-w-0 items-center gap-4">
                       <service.icon aria-hidden="true" className="w-6 h-6 text-[#FF8C00] shrink-0" />
                       <div>
                         <span className="block font-bold text-sm sm:text-base tracking-wide uppercase">{service.title}</span>
-                        <span className="block text-slate-600 text-sm mt-1">{service.desc}</span>
+                        <span className="block text-white/80 text-sm mt-1">{service.desc}</span>
                       </div>
                     </div>
                     <ArrowRight aria-hidden="true" className="w-5 h-5 shrink-0 text-[#FF8C00] transition-transform motion-safe:group-hover:translate-x-1 motion-reduce:transition-none" />
@@ -81,7 +81,7 @@ export default function Home() {
             <button
               type="button"
               aria-label="Explore why clients choose WIN Human Capital"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-[#0022E8] transition-colors hover:bg-[#0022E8]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00]"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF8C00]"
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth' })}
             >
               <ChevronDown aria-hidden="true" className="h-5 w-5" />

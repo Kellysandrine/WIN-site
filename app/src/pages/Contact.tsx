@@ -34,10 +34,10 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0022E8] mb-4">
-                Contact <span className="text-[#0022E8]">Us</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Contact <span className="text-white">Us</span>
               </h1>
-              <p className="text-slate-600 text-lg max-w-2xl">
+              <p className="text-white/80 text-lg max-w-2xl">
                 Get in touch with our team for tailored solutions designed to fit your unique business needs.
               </p>
             </motion.div>

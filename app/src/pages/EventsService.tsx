@@ -36,10 +36,10 @@ export default function EventsService() {
         <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0022E8] mb-3">
-                Corporate <span className="text-[#0022E8]">Events</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
+                Corporate <span className="text-white">Events</span>
               </h1>
-              <p className="text-slate-600 text-lg max-w-xl">
+              <p className="text-white/80 text-lg max-w-xl">
                 Creating memorable experiences that elevate your brand and engage your audience.
               </p>
             </motion.div>
@@ -48,7 +48,7 @@ export default function EventsService() {
       </section>
 
       {/* Services Grid - Icon Cards */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-[#081641]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,10 +56,10 @@ export default function EventsService() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-3">
-              Our <span className="text-[#0022E8]">Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              Our <span className="text-white">Services</span>
             </h2>
-            <p className="text-slate-600 max-w-md mx-auto">Full-service event planning and management</p>
+            <p className="text-white/75 max-w-md mx-auto">Full-service event planning and management</p>
           </motion.div>
 
           <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -70,12 +70,12 @@ export default function EventsService() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="bg-white rounded-2xl p-5 md:p-6 border border-border hover:border-[#FF8C00]/50 hover:bg-[#0022E8]/5 transition-all group text-center"
+                className="bg-white/5 rounded-2xl p-5 md:p-6 border border-white/20 hover:border-[#FF8C00]/50 hover:bg-white/10 transition-all group text-center"
               >
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#0022E8]/5 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#FF8C00]/15 transition-colors">
-                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#0022E8]" />
+                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <h3 className="text-[#0022E8] text-sm md:text-base font-semibold leading-tight">{service.title}</h3>
+                <h3 className="text-white text-sm md:text-base font-semibold leading-tight">{service.title}</h3>
               </motion.div>
             ))}
           </div>

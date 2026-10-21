@@ -44,7 +44,7 @@ export default function ProjectDetail() {
               {/* Back link */}
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-slate-600 hover:text-[#0022E8] hover:underline transition-colors text-sm mb-4"
+                className="inline-flex items-center gap-2 text-white/80 hover:text-white hover:underline transition-colors text-sm mb-4"
               >
                 <ArrowLeft className="w-4 h-4" /> Back to Projects
               </Link>
@@ -54,20 +54,20 @@ export default function ProjectDetail() {
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5 ${
                   project.category === 'communication'
                     ? 'bg-[#0022E8] text-white'
-                    : 'bg-[#FF8C00] text-[#0022E8]'
+                    : 'bg-[#FF8C00] text-[#081641]'
                 }`}>
                   <CategoryIcon className="w-3 h-3" />
                   {project.category === 'communication' ? 'Communication' : 'Events'}
                 </span>
-                <span className="text-slate-600 text-xs flex items-center gap-1">
+                <span className="text-white/80 text-xs flex items-center gap-1">
                   <Calendar className="w-3 h-3" /> {project.year}
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0022E8] mb-2">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
                 {project.title}
               </h1>
-              <p className="text-slate-600 text-sm md:text-base max-w-2xl">
+              <p className="text-white/80 text-sm md:text-base max-w-2xl">
                 {project.shortDesc}
               </p>
             </motion.div>

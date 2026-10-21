@@ -37,10 +37,10 @@ export default function CommunicationService() {
         <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0022E8] mb-3">
-                <span className="text-[#0022E8]">Communication</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
+                <span className="text-white">Communication</span>
               </h1>
-              <p className="text-slate-600 text-lg max-w-xl">
+              <p className="text-white/80 text-lg max-w-xl">
                 Communication for Development — driving change in health, education, and governance.
               </p>
             </motion.div>
@@ -70,7 +70,7 @@ export default function CommunicationService() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-[#081641]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,10 +78,10 @@ export default function CommunicationService() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0022E8] mb-3">
-              Our <span className="text-[#0022E8]">Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              Our <span className="text-white">Services</span>
             </h2>
-            <p className="text-slate-600 max-w-md mx-auto">Full-spectrum communication production</p>
+            <p className="text-white/75 max-w-md mx-auto">Full-spectrum communication production</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,13 +91,13 @@ export default function CommunicationService() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="bg-white rounded-2xl p-5 sm:p-8 border border-border hover:border-[#FF8C00]/50 transition-all flex flex-col justify-center"
+              className="bg-white/5 rounded-2xl p-5 sm:p-8 border border-white/20 hover:border-[#FF8C00]/50 transition-all flex flex-col justify-center"
             >
               <div className="w-14 h-14 rounded-xl bg-[#0022E8]/5 flex items-center justify-center mb-5">
                 <Lightbulb className="w-7 h-7 text-[#FF8C00]" />
               </div>
-              <h3 className="text-[#0022E8] text-xl font-semibold mb-2">Concept Elaboration & Development</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <h3 className="text-white text-xl font-semibold mb-2">Concept Elaboration & Development</h3>
+              <p className="text-white/75 text-sm leading-relaxed">
                 Strategic thinking and creative direction before production begins.
               </p>
             </motion.div>
@@ -108,19 +108,19 @@ export default function CommunicationService() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white rounded-2xl p-5 sm:p-8 border border-border hover:border-[#FF8C00]/50 transition-all"
+              className="bg-white/5 rounded-2xl p-5 sm:p-8 border border-white/20 hover:border-[#FF8C00]/50 transition-all"
             >
-              <h3 className="text-[#0022E8] text-xl font-semibold mb-5">
+              <h3 className="text-white text-xl font-semibold mb-5">
                 Creation & Production of Dissemination Materials
               </h3>
               <div className="space-y-3">
                 {productionItems.map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 border border-border"
+                    className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3 border border-white/20"
                   >
                     <item.icon className="w-5 h-5 text-[#FF8C00] shrink-0" />
-                    <span className="text-[#0022E8] text-sm font-medium">{item.title}</span>
+                    <span className="text-white text-sm font-medium">{item.title}</span>
                   </div>
                 ))}
               </div>

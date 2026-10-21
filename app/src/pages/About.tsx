@@ -27,8 +27,8 @@ export default function About() {
         <div className="page-hero-content">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0022E8] mb-3">About <span className="text-[#0022E8]">WIN</span></h1>
-              <p className="text-slate-600 text-lg max-w-lg">Your people, your strengths. Since 2011.</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">About <span className="text-white">WIN</span></h1>
+              <p className="text-white/80 text-lg max-w-lg">Your people, your strengths. Since 2011.</p>
             </motion.div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { stockPhotoAlt } from '../content/stockPhotos';
 import { Link } from 'react-router';
 import { ArrowUpRight, ArrowRight, Plus } from 'lucide-react';
 import type { ReactNode } from 'react';
@@ -6,7 +7,7 @@ export function Photo({ name, alt, className = '', priority = false }: {
     alt: string;
     className?: string;
     priority?: boolean;
-}) { return <img src={`/images/${name}-960.webp`} srcSet={`/images/${name}-640.webp 640w, /images/${name}-960.webp 960w, /images/${name}-1536.webp 1536w`} sizes={className.includes("win-cover") ? "100vw" : "(max-width: 767px) 100vw, 60vw"} width="1536" height="1024" alt={alt} className={className} loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} decoding="async"/>; }
+}) { return <img src={`/images/stock-${name}-960.webp`} srcSet={`/images/stock-${name}-640.webp 640w, /images/stock-${name}-960.webp 960w, /images/stock-${name}-1920.webp 1920w`} sizes={className.includes("win-cover") ? "100vw" : "(max-width: 767px) 100vw, 60vw"} width="1920" height="1280" alt={stockPhotoAlt[name] || alt} className={className} loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} decoding="async"/>; }
 export function Button({ to, children, secondary = false }: {
     to: string;
     children: ReactNode;

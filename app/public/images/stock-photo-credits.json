@@ -1,0 +1,74 @@
+[
+  {
+    "name": "collaboration",
+    "photographer": "PICHA Stock",
+    "source": "https://www.pexels.com/photo/women-talking-to-each-other-3894383/",
+    "photoId": 3894383,
+    "license": "https://www.pexels.com/license/",
+    "alt": "Three African women discussing work with notebooks and a laptop",
+    "originalDimensions": [
+      5149,
+      3433
+    ]
+  },
+  {
+    "name": "team",
+    "photographer": "Christina Morillo",
+    "source": "https://www.pexels.com/photo/group-of-five-women-gathering-inside-office-1181607/",
+    "photoId": 1181607,
+    "license": "https://www.pexels.com/license/",
+    "alt": "Women collaborating around a conference table",
+    "originalDimensions": [
+      6016,
+      4016
+    ]
+  },
+  {
+    "name": "hr",
+    "photographer": "Christina Morillo",
+    "source": "https://www.pexels.com/photo/photography-of-women-talking-to-each-other-1181717/",
+    "photoId": 1181717,
+    "license": "https://www.pexels.com/license/",
+    "alt": "Two professionals discussing work across an office table",
+    "originalDimensions": [
+      5760,
+      3840
+    ]
+  },
+  {
+    "name": "communication",
+    "photographer": "Josh Toxic",
+    "source": "https://www.pexels.com/photo/young-cameraperson-filming-an-event-in-kigali-36424379/",
+    "photoId": 36424379,
+    "license": "https://www.pexels.com/license/",
+    "alt": "Cameraman operating a video camera at an event in Kigali",
+    "originalDimensions": [
+      5568,
+      3712
+    ]
+  },
+  {
+    "name": "community",
+    "photographer": "finix photographer",
+    "source": "https://www.pexels.com/photo/community-gathering-with-technology-in-rwanda-29521026/",
+    "photoId": 29521026,
+    "license": "https://www.pexels.com/license/",
+    "alt": "People engaging with technology at a community event in Rwanda",
+    "originalDimensions": [
+      5568,
+      3712
+    ]
+  },
+  {
+    "name": "events",
+    "photographer": "Wiseboy Wissebo",
+    "source": "https://www.pexels.com/photo/diverse-audience-engaged-at-conference-event-38111334/",
+    "photoId": 38111334,
+    "license": "https://www.pexels.com/license/",
+    "alt": "Audience members listening at a conference",
+    "originalDimensions": [
+      7008,
+      4672
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+import { Link } from 'react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { services } from '../content/services';
+import { PageHero, Photo, CTA } from '../components/SiteSections';
+export default function Services() { return <><PageHero eyebrow="Our expertise" title="People, communication and experiences. Connected." intro="Explore the services of World Intermedia Network in Kigali, Rwanda. Choose a focused assignment or a coordinated approach across human resources, communication and corporate events." image="team" alt="Illustrative team discussing a shared project"/><section className="win-section win-navy"><div className="win-container win-services-list">{services.map((s, i) => <article className="win-services-row" key={s.key}><Photo name={s.image} alt={s.imageAlt}/><div><p className="win-eyebrow">0{i + 1} / {s.label}</p><h2>{s.heading}</h2><p>{s.body[0]}</p><ul>{s.offers.slice(0, 4).map(o => <li key={o.title}>{o.title}</li>)}</ul><Link className="win-text-link" to={s.path}>Explore {s.label.toLowerCase()} <ArrowUpRight size={18}/></Link></div></article>)}</div></section><CTA /></>; }
